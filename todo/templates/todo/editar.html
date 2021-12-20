@@ -1,0 +1,15 @@
+{% extends 'todo/layout.html' %}
+
+{% block content %}
+    
+<div class="container text-center">
+    <form method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+          {{ form }}
+        </div>
+        <button type="submit" class="btn btn-primary">Editar</button>
+    </form>
+</div>
+
+{% endblock %}
